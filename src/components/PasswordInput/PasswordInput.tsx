@@ -59,22 +59,23 @@ export const PasswordInput = forwardRef<
   }, [setHidePassword]);
 
   return (
-    <div>
-      <div
-        className={`${styles.inputContainer}${variant ? ` ${styles[variant]}` : ""}`}
-      >
-        <div className={styles.icon}>
-          <DynamicIcon size="2rem" name="lock-keyhole" />
-        </div>
-        <input
-          type={hidePassword ? "password" : "text"}
-          placeholder={label}
-          onChange={handleChange}
-          disabled={disabled}
-        />
-        <div className={styles.eye} onClick={toggleVisibility}>
-          <DynamicIcon size="2rem" name={hidePassword ? "eye" : "eye-off"} />
-        </div>
+    <div
+      className={`${styles.inputContainer}${variant ? ` ${styles[variant]}` : ""}`}
+    >
+      <div className={styles.icon}>
+        <DynamicIcon size="2rem" name="lock-keyhole" />
+      </div>
+      <input
+        type={hidePassword ? "password" : "text"}
+        placeholder={" "}
+        name={label}
+        onChange={handleChange}
+        disabled={disabled}
+        id={`passwordInput`}
+      />
+      <label htmlFor={`passwordInput`}>{label}</label>
+      <div className={styles.eye} onClick={toggleVisibility}>
+        <DynamicIcon size="2rem" name={hidePassword ? "eye" : "eye-off"} />
       </div>
     </div>
   );
