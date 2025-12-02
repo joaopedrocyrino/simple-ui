@@ -63,7 +63,7 @@ export const PasswordInput = forwardRef<
       className={`${styles.inputContainer}${variant ? ` ${styles[variant]}` : ""}`}
     >
       <div className={styles.icon}>
-        <DynamicIcon size="2rem" name="lock-keyhole" />
+        <DynamicIcon size="1.5rem" name="lock-keyhole" />
       </div>
       <input
         type={hidePassword ? "password" : "text"}
@@ -75,7 +75,7 @@ export const PasswordInput = forwardRef<
       />
       <label htmlFor={`passwordInput`}>{label}</label>
       <div className={styles.eye} onClick={toggleVisibility}>
-        <DynamicIcon size="2rem" name={hidePassword ? "eye" : "eye-off"} />
+        <DynamicIcon size="1.5rem" name={hidePassword ? "eye" : "eye-off"} />
       </div>
     </div>
   );
