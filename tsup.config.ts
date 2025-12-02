@@ -49,9 +49,9 @@ export default defineConfig({
   external: ["react", "react-dom"],
   loader: { ".css": "local-css" },
   onSuccess: async () => {
-    // writes extracted CSS to dist/style.css
+    // writes extracted CSS to dist/styles.css
     const css = Array.from(cssMap.values()).join("\n");
-    fs.writeFileSync("dist/style.css", css);
+    fs.writeFileSync("dist/styles.css", css);
   },
   plugins: [cssModulesPlugin],
 });
